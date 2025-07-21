@@ -1,18 +1,18 @@
 # Xcode
 #
-# User settings and temporary files
-xcuserdata/
+# User settings and temporary files (anywhere in project)
+**/xcuserdata/
 *.xcuserstate
-*.xcuserdatad
+**/xcuserdatad
 
 # Xcode compatibility files
 *.xcscmblueprint
 *.xccheckout
 *.hmap
 
-# Build artifacts
-build/
-DerivedData/
+# Build artifacts (anywhere in project)
+**/build/
+**/DerivedData/
 
 # App packaging
 *.ipa
@@ -23,10 +23,19 @@ DerivedData/
 timeline.xctimeline
 playground.xcworkspace
 
+# Swift Package Manager
+# Uncomment the next lines if you want to ignore SPM dependencies
+# .swiftpm/
+# Packages/
+# Package.resolved
+
 # SwiftData & Core Data
 *.sqlite
 *.sqlite-shm
 *.sqlite-wal
+
+# SwiftLint (for future use)
+# .swiftlint.yml
 
 # macOS system files
 .DS_Store
