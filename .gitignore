@@ -23,6 +23,15 @@
 timeline.xctimeline
 playground.xcworkspace
 
+# Workspace files
+contents.xcworkspacedata
+*.xcworkspacedata
+**/contents.xcworkspacedata
+
+# System folders that might be created
+Contents/
+**/Contents/
+
 # Swift Package Manager
 # Uncomment the next lines if you want to ignore SPM dependencies
 # .swiftpm/
