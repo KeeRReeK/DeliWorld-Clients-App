@@ -10,7 +10,7 @@ import SwiftUI
 struct LaunchFirstScreenView: View {
     var body: some View {
         ZStack {
-            Color("Background Launch First Screen")
+            Color("Yellow Base")
             Image("Logo First Screen")
                 .padding(.bottom, 20)
         }
