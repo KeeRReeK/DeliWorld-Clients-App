@@ -8,31 +8,21 @@
 import SwiftUI
 
 struct OnboardingOrderView: View {
-    @State var isPresented: Bool = true
-    
     var body: some View {
         ZStack {
             Image("Background Onboarding Order")
                 .resizable()
                 .ignoresSafeArea()
-                
-            
-            VStack {
-                
-                Spacer()
-            }
             
             VStack {
                 Spacer()
-                RoundedRectangle(cornerRadius: 0, style: .continuous)
+                RoundedRectangle(cornerRadius: 24, style: .continuous)
                     .fill(Color.white)
                     .frame(maxHeight: 338)
                     .overlay(
-                        ScrollView(showsIndicators: false) {
-                            OnboardingOrderContent()
-                        }
+                        OnboardingOrderContent()
                     )
-                    
+                
             }
             .ignoresSafeArea()
         }
@@ -58,7 +48,6 @@ struct OnboardingOrderContent: View {
             Image("Onboarding Order Icon")
                 .font(.system(size: 36))
                 .foregroundColor(.orangeBase)
-                .padding(.top, 23)
             
             Text("Order For Food")
                 .font(.custom("Inter-Regular_Black", size: 24))
@@ -67,7 +56,7 @@ struct OnboardingOrderContent: View {
             Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.")
                 .font(.custom("LeagueSpartan-Medium", size: 14))
                 .multilineTextAlignment(.center)
-                .foregroundColor(.gray)
+                .foregroundColor(.black)
                 .padding(.horizontal, 60)
             
             HStack(spacing: 8) {
