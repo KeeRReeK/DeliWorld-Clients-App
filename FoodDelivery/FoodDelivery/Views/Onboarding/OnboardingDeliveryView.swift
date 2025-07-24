@@ -48,7 +48,7 @@ struct OnboardingDeliveryContent: View {
                 .font(.system(size: 36))
                 .foregroundColor(.orangeBase)
             
-            Text("Easy Payment")
+            Text("Fast Delivery")
                 .font(.custom("Inter-Regular_Black", size: 24))
                 .foregroundColor(.orangeBase)
             
