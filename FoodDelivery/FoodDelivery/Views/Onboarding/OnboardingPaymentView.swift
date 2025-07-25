@@ -15,7 +15,7 @@ struct OnboardingPaymentView: View {
                 .ignoresSafeArea()
             VStack {
                 Spacer()
-                RoundedRectangle(cornerRadius: 0, style: .continuous)
+                RoundedRectangle(cornerRadius: 24, style: .continuous)
                     .fill(Color.white)
                     .frame(maxHeight: 338)
                     .overlay(
