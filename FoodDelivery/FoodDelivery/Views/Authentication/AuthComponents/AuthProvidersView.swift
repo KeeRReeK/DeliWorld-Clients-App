@@ -21,6 +21,8 @@ struct AuthProvidersView: View {
     }
 }
 
+
+
 #Preview {
     AuthProvidersView()
 }
