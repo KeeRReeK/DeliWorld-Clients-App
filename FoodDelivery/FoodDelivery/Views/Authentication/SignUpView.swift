@@ -1,5 +1,5 @@
 //
-//  LoginView.swift
+//  SignUpView.swift
 //  FoodDelivery
 //
 //  Created by KeeR ReeK on 24.07.2025.
@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-struct LogInView: View {
+struct SignUpView: View {
     var body: some View {
         ZStack {
             Color("Yellow Base")
                 .ignoresSafeArea()
             VStack {
-                Text("Log In")
+                Text("New Account")
                     .foregroundStyle(.white)
                     .font(.system(size: 28, weight: .bold))
                     .padding(.top, 65)
@@ -22,7 +22,7 @@ struct LogInView: View {
                     .fill(Color.white)
                     .overlay(
                         ScrollView {
-                            LogInContent()
+                            SignUpContent()
                         }
                             .padding(.top, 25)
                     )
@@ -33,21 +33,22 @@ struct LogInView: View {
     }
 }
 
-struct LogInContent: View {
+struct SignUpContent: View {
     @State private var email: String = ""
+    @State private var nickname: String = ""
     @State private var password: String = ""
-    @State private var isSecurePassword: Bool = true
+    @State private var dateOfBirth: Date = Date()
     
     var body: some View {
         VStack(alignment: .leading) {
             
-            Text("Email or Mobile Number")
+            Text("Full name")
                 .font(.system(size: 20, weight: .medium))
             
             TextField(
                 "",
-                text: $email,
-                prompt: Text("Email or Phone").foregroundColor(.gray)
+                text: $nickname,
+                prompt: Text("Name").foregroundColor(.gray)
             )
             .padding()
             .background(.yellow2)
@@ -57,21 +58,53 @@ struct LogInContent: View {
                 .font(.system(size: 20, weight: .medium))
                 .padding(.top, 20)
             
+            
             PasswordInputView(password: $password)
             
-            VStack(alignment: .trailing) {
-                Button("Forget Password") {
-                    print("Forget Password")
-                }
-                .font(.custom("LeagueSpartan-Medium", size: 14))
-                .foregroundStyle(.orangeBase)
-                .padding(5)
-            }
-            .frame(maxWidth: .infinity, alignment: .trailing)
+            
+            Text("Email")
+                .font(.system(size: 20, weight: .medium))
+                .padding(.top, 20)
+            
+            TextField(
+                "",
+                text: $email,
+                prompt: Text("Email").foregroundColor(.gray)
+            )
+            .padding()
+            .background(.yellow2)
+            .cornerRadius(13)
+            
+            Text("Mobile Number")
+                .font(.system(size: 20, weight: .medium))
+                .padding(.top, 20)
+            
+            TextField(
+                "",
+                text: $email,
+                prompt: Text("+123 456 789").foregroundColor(.gray)
+            )
+            .keyboardType(.phonePad)
+            .padding()
+            .background(.yellow2)
+            .cornerRadius(13)
+            
+            
+            Text("Date of birth")
+                .font(.system(size: 20, weight: .medium))
+                .padding(.top, 20)
+            
+            DatePicker("", selection: $dateOfBirth, displayedComponents: .date)
+                .padding()
+                .frame(maxWidth: .infinity)
+                .background(.yellow2)
+                .cornerRadius(13)
+                .labelsHidden()
+            
             
             VStack(alignment: .center) {
-                Button("Log In") {
-                    print("Log In")
+                Button("Sign Up") {
+                    print("Sign Up")
                 }
                 .font(.custom("LeagueSpartan-Medium", size: 24))
                 .padding()
@@ -79,20 +112,20 @@ struct LogInContent: View {
                 .foregroundStyle(.white)
                 .background(.orangeBase)
                 .cornerRadius(30)
-                .padding(.top, 60)
+                .padding(.top, 40)
                 
                 AuthProvidersView()
-                    .padding(.top)
+                    .padding(.top, 5)
                 
                 HStack(spacing: 0) {
-                    Text("Don't have an account? ")
+                    Text("Already have an account? ")
                         .font(.system(size: 14))
                         .foregroundColor(.black)
 
                     Button(action: {
-                        print("Sign Up")
+                        print("Log in")
                     }) {
-                        Text("Sign Up")
+                        Text("Log in")
                             .font(.system(size: 14))
                             .foregroundColor(.orangeBase)
                     }
@@ -108,7 +141,6 @@ struct LogInContent: View {
     }
 }
 
-
 #Preview {
-    LogInView()
+    SignUpView()
 }
