@@ -18,6 +18,7 @@ struct TabBarView: View {
     var body: some View {
         TabView(selection: $selectedTab) {
             HomeView()
+                .padding(.bottom, 1)
                 .tabItem {
                     Label("", image: "Home Icon")
                 }
