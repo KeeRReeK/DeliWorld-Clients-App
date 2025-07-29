@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+    @State private var isMenuOpen = false
+    
     var body: some View {
         ZStack {
             Color(.yellowBase)
@@ -55,7 +58,9 @@ struct HomeView: View {
                     }
                     
                     Button {
-                        
+                        withAnimation(.easeInOut(duration: 0.3)) {
+                            isMenuOpen.toggle()
+                        }
                     } label: {
                         RoundedRectangle(cornerRadius: 15)
                             .fill(.white)
@@ -89,6 +94,25 @@ struct HomeView: View {
                 
             }
             
+            if isMenuOpen {
+                Color.black.opacity(0.3)
+                    .ignoresSafeArea()
+                    .onTapGesture {
+                        withAnimation(.easeInOut(duration: 0.3)) {
+                            isMenuOpen = false
+                        }
+                    }
+            }
+            
+            HStack {
+                if isMenuOpen {
+                    SlidebarContent(isMenuOpen: $isMenuOpen)
+                        .transition(.move(edge: .leading))
+                        .padding(.trailing, 100)
+                        
+                }
+                Spacer()
+            }
         }
     }
     
