@@ -22,14 +22,8 @@ struct SlidebarContent: View {
             }
             SlidebarItem(image: "Slidebar Profile", text: "My Profile")
                 .padding(.top, 50)
-            Divider()
-                .background(.white)
             SlidebarItem(image: "Slidebar Delivery Adress", text: "Delivery Adress")
-            Divider()
-                .background(.white)
             SlidebarItem(image: "Slidebar Settings", text: "Settings")
-            Divider()
-                .background(.white)
             SlidebarItem(image: "Slidebar Log Out", text: "Log Out")
                 .padding(.top, 50)
                 
@@ -62,24 +56,28 @@ struct SlidebarItem: View {
     let text: String
     
     var body: some View {
-        
-        Button {
-            
-        } label: {
-            HStack(alignment: .center, spacing: 20) {
-                RoundedRectangle(cornerRadius: 15)
-                    .frame (width: 40, height: 40)
-                    .foregroundStyle(.white)
-                    .overlay {
-                        Image(image)
-                    }
-                Text(text)
-                    .font(.custom("LeagueSpartan-Medium", size: 24))
-                    .foregroundStyle(.yellow2)
+        VStack {
+            Button {
+                
+            } label: {
+                HStack(alignment: .center, spacing: 20) {
+                    RoundedRectangle(cornerRadius: 15)
+                        .frame (width: 40, height: 40)
+                        .foregroundStyle(.white)
+                        .overlay {
+                            Image(image)
+                        }
+                    Text(text)
+                        .font(.custom("LeagueSpartan-Medium", size: 24))
+                        .foregroundStyle(.yellow2)
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
             }
-            .frame(maxWidth: .infinity, alignment: .leading)
+            .padding(5)
+            Rectangle()
+                .foregroundColor(.white)
+                .frame(height: 1)
         }
-        .padding(5)
     }
 }
 
