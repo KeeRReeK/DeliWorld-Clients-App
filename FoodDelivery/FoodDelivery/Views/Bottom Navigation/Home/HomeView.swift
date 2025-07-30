@@ -10,6 +10,8 @@ import SwiftUI
 struct HomeView: View {
     
     @State private var isMenuOpen = false
+    @State private var isCartOpen = false
+    @State private var cartIsEmpty = false
     
     var body: some View {
         ZStack {
@@ -43,7 +45,9 @@ struct HomeView: View {
                         .shadow(color: .black.opacity(0.3), radius: 5, x: 0, y: 5)
                     
                     Button {
-                        
+                        withAnimation(.easeInOut(duration: 0.3)) {
+                            isCartOpen.toggle()
+                        }
                     } label: {
                         RoundedRectangle(cornerRadius: 15)
                             .fill(.white)
@@ -94,12 +98,13 @@ struct HomeView: View {
                 
             }
             
-            if isMenuOpen {
+            if isMenuOpen || isCartOpen {
                 Color.black.opacity(0.3)
                     .ignoresSafeArea()
                     .onTapGesture {
                         withAnimation(.easeInOut(duration: 0.3)) {
                             isMenuOpen = false
+                            isCartOpen = false
                         }
                     }
             }
@@ -109,7 +114,10 @@ struct HomeView: View {
                     SlidebarContent(isMenuOpen: $isMenuOpen)
                         .transition(.move(edge: .leading))
                         .padding(.trailing, 100)
-                        
+                } else if isCartOpen {
+                    CartContent(isCartOpen: $isCartOpen, cartIsEmpty: $cartIsEmpty)
+                        .transition(.move(edge: .leading))
+                        .padding(.trailing, 100)
                 }
                 Spacer()
             }
