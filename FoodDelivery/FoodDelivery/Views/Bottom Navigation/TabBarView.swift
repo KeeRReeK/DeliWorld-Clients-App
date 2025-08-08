@@ -25,24 +25,28 @@ struct TabBarView: View {
                 .tag(0)
             
             MenuView()
+                .padding(.bottom, 1)
                 .tabItem {
                     Label("", image: "Menu Icon")
                 }
                 .tag(1)
             
             FavoritesView()
+                .padding(.bottom, 1)
                 .tabItem {
                     Label("", image: "Favorites Icon")
                 }
                 .tag(2)
             
             OrdersView()
+                .padding(.bottom, 1)
                 .tabItem {
                     Label("", image: "Order Icon")
                 }
                 .tag(3)
             
             HelpView()
+                .padding(.bottom, 1)
                 .tabItem {
                     Label("", image: "Help Icon")
                 }
