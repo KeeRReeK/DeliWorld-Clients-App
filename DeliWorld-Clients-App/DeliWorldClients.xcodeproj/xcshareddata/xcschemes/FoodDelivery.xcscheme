@@ -45,11 +45,20 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8CE2A6B52E2EA75100C3CDD4"
+            BuildableName = "DeliWorldClients.app"
+            BlueprintName = "DeliWorldClients"
+            ReferencedContainer = "container:DeliWorldClients.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "8CE2A6B52E2EA75100C3CDD4"
             BuildableName = "FoodDelivery.app"
             BlueprintName = "FoodDelivery"
             ReferencedContainer = "container:FoodDelivery.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
          <AdditionalOption
             key = "APP_DISTRIBUTOR_ID_OVERRIDE"
@@ -78,6 +87,15 @@
             ReferencedContainer = "container:FoodDelivery.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "8CE2A6B52E2EA75100C3CDD4"
+            BuildableName = "FoodDelivery.app"
+            BlueprintName = "FoodDelivery"
+            ReferencedContainer = "container:FoodDelivery.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
