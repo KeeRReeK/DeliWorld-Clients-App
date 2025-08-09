@@ -33,7 +33,7 @@ struct MenuItemView: View {
                 .frame(height: 1)
                 .padding(.vertical)
         }
-        .padding()
+        .padding(.horizontal)
     }
 }
 

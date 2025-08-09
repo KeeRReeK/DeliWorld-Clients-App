@@ -118,22 +118,6 @@ struct MenuView: View {
             }
         }
     }
-    
-    var attributedWelcomeString: AttributedString {
-        var string = AttributedString("Good Morning" + "\n " + "Rise and shine! It's breakfast time")
-        
-        if let temp = string.range(of: "Good Morning") {
-            string[temp].font = .custom("LeagueSpartan-Bold", size: 40)
-            string[temp].foregroundColor = .white
-        }
-        
-        if let weather = string.range(of: "Rise and shine! It's breakfast time") {
-            string[weather].font = .custom("LeagueSpartan-Medium", size: 20)
-            string[weather].foregroundColor = .orangeBase
-        }
-        
-        return string
-    }
 }
 
 #Preview {
