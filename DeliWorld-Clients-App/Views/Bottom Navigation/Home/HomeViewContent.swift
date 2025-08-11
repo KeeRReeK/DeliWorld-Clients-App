@@ -27,15 +27,15 @@ struct HomeViewContent: View {
             
             ScrollView(.horizontal) {
                 HStack(spacing: 15) {
-                    BestSellerItemView(image: "Food Card Best Seller", price: "103,00")
+                    BestSellerItemCompact(image: "Food Card Best Seller", price: "103,00")
                         .padding(.bottom, 15)
-                    BestSellerItemView(image: "Food Card Best Seller@2", price: "50,00")
+                    BestSellerItemCompact(image: "Food Card Best Seller@2", price: "50,00")
                         .padding(.bottom, 15)
-                    BestSellerItemView(image: "Food Card Best Seller", price: "12,99")
+                    BestSellerItemCompact(image: "Food Card Best Seller", price: "12,99")
                         .padding(.bottom, 15)
-                    BestSellerItemView(image: "Food Card Best Seller@2", price: "8,20")
+                    BestSellerItemCompact(image: "Food Card Best Seller@2", price: "8,20")
                         .padding(.bottom, 15)
-                    BestSellerItemView(image: "Food Card Best Seller", price: "103,00")
+                    BestSellerItemCompact(image: "Food Card Best Seller", price: "103,00")
                         .padding(.bottom, 15)
                 }
             }
