@@ -93,11 +93,11 @@ struct HomeView: View {
             
             HStack {
                 if isMenuOpen {
-                    SlidebarContent(isMenuOpen: $isMenuOpen)
+                    SlidebarProfile(isMenuOpen: $isMenuOpen)
                         .transition(.move(edge: .leading))
                         .padding(.trailing, 100)
                 } else if isCartOpen {
-                    CartContent(isCartOpen: $isCartOpen, cartIsEmpty: $cartIsEmpty)
+                    SlidebarCart(isCartOpen: $isCartOpen, cartIsEmpty: $cartIsEmpty)
                         .transition(.move(edge: .leading))
                         .padding(.trailing, 100)
                 }

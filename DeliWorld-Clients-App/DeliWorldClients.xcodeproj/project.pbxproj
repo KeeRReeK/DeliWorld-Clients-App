@@ -20,11 +20,9 @@
 		8C47614D2E476E6D00C75558 /* OnboardingDeliveryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C47613D2E476E6D00C75558 /* OnboardingDeliveryView.swift */; };
 		8C47614E2E476E6D00C75558 /* OnboardingPaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C47613F2E476E6D00C75558 /* OnboardingPaymentView.swift */; };
 		8C47614F2E476E6D00C75558 /* LaunchWelcomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C47613B2E476E6D00C75558 /* LaunchWelcomeScreenView.swift */; };
-		8C4761502E476E6D00C75558 /* SlidebarContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C47612F2E476E6D00C75558 /* SlidebarContent.swift */; };
 		8C4761512E476E6D00C75558 /* HomeViewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C47612D2E476E6D00C75558 /* HomeViewContent.swift */; };
 		8C4761522E476E6D00C75558 /* FoodDeliveryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4761172E476E6D00C75558 /* FoodDeliveryApp.swift */; };
 		8C4761532E476E6D00C75558 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4761242E476E6D00C75558 /* SignUpView.swift */; };
-		8C4761542E476E6D00C75558 /* CartContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C47612B2E476E6D00C75558 /* CartContent.swift */; };
 		8C4761552E476E6D00C75558 /* MenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4761322E476E6D00C75558 /* MenuItemView.swift */; };
 		8C4761562E476E6D00C75558 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4761222E476E6D00C75558 /* LogInView.swift */; };
 		8C4761572E476E6D00C75558 /* OrdersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4761362E476E6D00C75558 /* OrdersView.swift */; };
@@ -53,11 +51,9 @@
 		8C4761262E476E6D00C75558 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		8C4761282E476E6D00C75558 /* HelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
 		8C47612A2E476E6D00C75558 /* BestSellerItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestSellerItemView.swift; sourceTree = "<group>"; };
-		8C47612B2E476E6D00C75558 /* CartContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartContent.swift; sourceTree = "<group>"; };
 		8C47612C2E476E6D00C75558 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		8C47612D2E476E6D00C75558 /* HomeViewContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewContent.swift; sourceTree = "<group>"; };
 		8C47612E2E476E6D00C75558 /* RecommendItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendItemView.swift; sourceTree = "<group>"; };
-		8C47612F2E476E6D00C75558 /* SlidebarContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidebarContent.swift; sourceTree = "<group>"; };
 		8C4761302E476E6D00C75558 /* SliderDiscountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderDiscountView.swift; sourceTree = "<group>"; };
 		8C4761322E476E6D00C75558 /* MenuItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemView.swift; sourceTree = "<group>"; };
 		8C4761332E476E6D00C75558 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
@@ -76,6 +72,11 @@
 		8C4761602E476FCD00C75558 /* Filter */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = Filter;
+			sourceTree = "<group>";
+		};
+		8C4761752E4791CF00C75558 /* Slidebar */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Slidebar;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -156,11 +157,9 @@
 			isa = PBXGroup;
 			children = (
 				8C47612A2E476E6D00C75558 /* BestSellerItemView.swift */,
-				8C47612B2E476E6D00C75558 /* CartContent.swift */,
 				8C47612C2E476E6D00C75558 /* HomeView.swift */,
 				8C47612D2E476E6D00C75558 /* HomeViewContent.swift */,
 				8C47612E2E476E6D00C75558 /* RecommendItemView.swift */,
-				8C47612F2E476E6D00C75558 /* SlidebarContent.swift */,
 				8C4761302E476E6D00C75558 /* SliderDiscountView.swift */,
 			);
 			path = Home;
@@ -188,6 +187,7 @@
 		8C4761392E476E6D00C75558 /* Bottom Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				8C4761752E4791CF00C75558 /* Slidebar */,
 				8C4761272E476E6D00C75558 /* Favorites */,
 				8C4761292E476E6D00C75558 /* Help */,
 				8C4761312E476E6D00C75558 /* Home */,
@@ -266,6 +266,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				8C4761602E476FCD00C75558 /* Filter */,
+				8C4761752E4791CF00C75558 /* Slidebar */,
 			);
 			name = DeliWorldClients;
 			packageProductDependencies = (
@@ -336,11 +337,9 @@
 				8C47614D2E476E6D00C75558 /* OnboardingDeliveryView.swift in Sources */,
 				8C47614E2E476E6D00C75558 /* OnboardingPaymentView.swift in Sources */,
 				8C47614F2E476E6D00C75558 /* LaunchWelcomeScreenView.swift in Sources */,
-				8C4761502E476E6D00C75558 /* SlidebarContent.swift in Sources */,
 				8C4761512E476E6D00C75558 /* HomeViewContent.swift in Sources */,
 				8C4761522E476E6D00C75558 /* FoodDeliveryApp.swift in Sources */,
 				8C4761532E476E6D00C75558 /* SignUpView.swift in Sources */,
-				8C4761542E476E6D00C75558 /* CartContent.swift in Sources */,
 				8C4761552E476E6D00C75558 /* MenuItemView.swift in Sources */,
 				8C4761562E476E6D00C75558 /* LogInView.swift in Sources */,
 				8C4761572E476E6D00C75558 /* OrdersView.swift in Sources */,
