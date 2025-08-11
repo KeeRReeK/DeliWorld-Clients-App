@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct BestSellerItemView: View {
+struct BestSellerItemCompact: View {
     var image: String
     var price: String
     
@@ -42,5 +42,5 @@ struct BestSellerItemView: View {
 }
 
 #Preview {
-    BestSellerItemView(image: "Food Card Best Seller", price: "103,00")
+    BestSellerItemCompact(image: "Food Card Best Seller", price: "103,00")
 }
