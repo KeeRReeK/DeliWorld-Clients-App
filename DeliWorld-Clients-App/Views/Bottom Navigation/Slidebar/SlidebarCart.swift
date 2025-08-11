@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CartContent: View {
+struct SlidebarCart: View {
     
     @Binding var isCartOpen: Bool
     @Binding var cartIsEmpty: Bool
@@ -158,10 +158,19 @@ struct CartItem: View {
                     .scaledToFit()
                     .frame( width: 80, height: 80)
                 VStack(alignment: .leading) {
-                    Text(name)
-                        .multilineTextAlignment(.leading)
-                        .font(.custom("LeagueSpartan-Medium", size: 15))
-                        .foregroundStyle(.white)
+                    HStack {
+                        Text(name)
+                            .multilineTextAlignment(.leading)
+                            .font(.custom("LeagueSpartan-Medium", size: 15))
+                            .foregroundStyle(.white)
+                        Spacer()
+                        Button {
+                            
+                        } label: {
+                            Image(systemName: "trash")
+                                .foregroundStyle(.white)
+                        }
+                    }
                     HStack {
                         Text("$\(price * count)")
                             .font(.system(size: 14))
@@ -201,5 +210,5 @@ struct CartItem: View {
 }
 
 #Preview {
-    CartContent(isCartOpen: .constant(false), cartIsEmpty: .constant(false))
+    SlidebarCart(isCartOpen: .constant(false), cartIsEmpty: .constant(false))
 }

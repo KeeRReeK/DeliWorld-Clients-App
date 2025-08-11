@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SlidebarContent: View {
+struct SlidebarProfile: View {
     
     @Binding var isMenuOpen: Bool
     
@@ -31,7 +31,6 @@ struct SlidebarContent: View {
         .padding()
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(.orangeBase)
-        
     }
     
     var attributedProfileString: AttributedString {
@@ -82,5 +81,5 @@ struct SlidebarItem: View {
 }
 
 #Preview {
-    SlidebarContent(isMenuOpen: .constant(false))
+    SlidebarProfile(isMenuOpen: .constant(false))
 }
