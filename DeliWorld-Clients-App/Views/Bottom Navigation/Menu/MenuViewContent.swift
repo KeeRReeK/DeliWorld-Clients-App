@@ -9,10 +9,30 @@ import SwiftUI
 
 struct MenuViewContent: View {
     
+    let items = ["Sunny Bruschetta", "Gourmet Grilled Skewers", "Barbecue tacos",
+                 "Broccoli lasagna", "Hello Kitty Pizza", "Spicy Thai Basil Chicken", "Spicy Thai Basil Chicken"]
+    
+    @State private var isGridView = true
+    
     var body: some View {
         VStack(alignment: .leading) {
             
             HStack {
+                Button {
+                    isGridView = false
+                } label: {
+                    Image(systemName: "list.bullet")
+                        .font(.system(size: 20))
+                        .foregroundColor(!isGridView ? .orangeBase : .gray)
+                }
+                
+                Button {
+                    isGridView = true
+                } label: {
+                    Image(systemName: "square.grid.2x2")
+                        .font(.system(size: 20))
+                        .foregroundColor(isGridView ? .orangeBase : .gray)
+                }
                 Spacer()
                 Text("Sort By")
                     .font(.custom("LeagueSpartan-Light", size: 18))
@@ -24,18 +44,31 @@ struct MenuViewContent: View {
                 }
                 .tint(.orangeBase)
             }
+            .padding(.horizontal)
             
-            ScrollView {
-                VStack {
-                    MenuItemView(title: "Pizza")
-                    MenuItemView(title: "Pasta")
-                    MenuItemView(title: "Salad")
-                    MenuItemView(title: "Sandwich")
+            if isGridView {
+                ScrollView {
+                    LazyVGrid(columns: [
+                        GridItem(.flexible()),
+                        GridItem(.flexible())
+                    ], spacing: 10) {
+                        ForEach(items, id: \.self) { item in
+                            ItemFullView(text: item)
+                                .padding(5)
+                        }
+                    }
+                    .padding(.horizontal)
+                }
+            } else {
+                ScrollView {
+                    VStack {
+                        MenuItemView(title: "Pizza")
+                        MenuItemView(title: "Pasta")
+                        MenuItemView(title: "Salad")
+                        MenuItemView(title: "Sandwich")
+                    }
                 }
             }
-            
-            
-                        
         }
         .frame(maxWidth: .infinity, alignment: .leading)
     }

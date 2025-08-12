@@ -1,13 +1,13 @@
 //
-//  BestSellerItemFull.swift
+//  ItemFullView.swift
 //  DeliWorldClients
 //
-//  Created by KeeR ReeK on 11.08.2025.
+//  Created by KeeR ReeK on 12.08.2025.
 //
 
 import SwiftUI
 
-struct BestSellerItemFull: View {
+struct ItemFullView: View {
     
     var text: String
     
@@ -25,7 +25,9 @@ struct BestSellerItemFull: View {
                     .lineLimit(2)
                 Spacer()
                 Text("$25.00")
-                    .font(.system(size: 15))
+//                    .font(.system(size: 15))
+                    .font(.custom("LeagueSpartan-Regular", size: 18))
+                    .foregroundStyle(.orangeBase)
             }
             HStack {
                 Text("Lorem ipsum dolor sit amet, consectetur...")
@@ -35,12 +37,12 @@ struct BestSellerItemFull: View {
             
         }
         .padding()
-        .background(.yellow2)
+        .background(.lightGray)
         .cornerRadius(20)
         .shadow(color: .black.opacity(0.3), radius: 5, x: 5, y: 5)
     }
 }
 
 #Preview {
-    BestSellerItemFull(text: "Sunny Bruschetta")
+    ItemFullView(text: "pizza")
 }
