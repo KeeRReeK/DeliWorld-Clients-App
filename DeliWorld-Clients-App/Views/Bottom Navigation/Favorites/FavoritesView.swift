@@ -1,5 +1,5 @@
 //
-//  MenuView.swift
+//  FavoritesView.swift
 //  FoodDelivery
 //
 //  Created by KeeR ReeK on 25.07.2025.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MenuView: View {
+struct FavoritesView: View {
     
     @State private var isMenuOpen = false
     @State private var isCartOpen = false
@@ -20,7 +20,7 @@ struct MenuView: View {
                 .padding(.bottom, 20)
             VStack {
                 HStack {
-                    TextField("Search dishes...", text: .constant(""))
+                    TextField("Find in favorites...", text: .constant(""))
                         .padding()
                         .background(Color.white)
                         .cornerRadius(30)
@@ -77,49 +77,32 @@ struct MenuView: View {
                             }
                             .shadow(color: .black.opacity(0.3), radius: 5, x: 0, y: 5)
                     }
-                    
                 }
                 .padding(.horizontal)
+                
+                HStack {
+                    
+                    Spacer()
+                    Text("Favorites")
+                        .font(.system(size: 30, weight: .bold, design: .default))
+                        .foregroundStyle(.white)
+                    Spacer()
+                }
+                .padding()
                 
                 RoundedRectangle(cornerRadius: 24, style: .continuous)
                     .fill(Color.white)
                     .ignoresSafeArea()
-                    .padding(.top)
                     .overlay(
-                        MenuViewContent()
-                            .padding(.top, 20)
+                        FavoritesViewContent()
+                            .padding(.top, 10)
                     )
-                    
-                
-            }
-            
-            if isMenuOpen || isCartOpen {
-                Color.black.opacity(0.3)
-                    .ignoresSafeArea()
-                    .onTapGesture {
-                        withAnimation(.easeInOut(duration: 0.3)) {
-                            isMenuOpen = false
-                            isCartOpen = false
-                        }
-                    }
-            }
-            
-            HStack {
-                if isMenuOpen {
-                    SlidebarProfile(isMenuOpen: $isMenuOpen)
-                        .transition(.move(edge: .leading))
-                        .padding(.trailing, 100)
-                } else if isCartOpen {
-                    SlidebarCart(isCartOpen: $isCartOpen, cartIsEmpty: $cartIsEmpty)
-                        .transition(.move(edge: .leading))
-                        .padding(.trailing, 100)
-                }
-                Spacer()
             }
         }
     }
 }
 
+
 #Preview {
-    MenuView()
+    FavoritesView()
 }

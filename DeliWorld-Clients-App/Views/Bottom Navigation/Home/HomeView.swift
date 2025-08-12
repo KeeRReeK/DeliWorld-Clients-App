@@ -20,7 +20,7 @@ struct HomeView: View {
                 .padding(.bottom, 20)
             VStack {
                 HStack {
-                    TextField("Search", text: .constant(""))
+                    TextField("Search dishes...", text: .constant(""))
                         .padding()
                         .background(Color.white)
                         .cornerRadius(30)
