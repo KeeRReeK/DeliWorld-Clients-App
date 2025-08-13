@@ -8,8 +8,31 @@
 import SwiftUI
 
 struct OrdersView: View {
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            Color(.yellowBase)
+                .ignoresSafeArea()
+                .padding(.bottom, 20)
+            VStack {
+                HStack {
+                    Spacer()
+                    Text("My Orders")
+                        .font(.system(size: 30, weight: .bold, design: .default))
+                        .foregroundStyle(.white)
+                    Spacer()
+                }
+                .padding()
+                
+                RoundedRectangle(cornerRadius: 24, style: .continuous)
+                    .fill(Color.white)
+                    .ignoresSafeArea()
+                    .overlay(
+                        OrdersViewContent()
+                            .padding(.top, 10)
+                    )
+            }
+        }
     }
 }
 
