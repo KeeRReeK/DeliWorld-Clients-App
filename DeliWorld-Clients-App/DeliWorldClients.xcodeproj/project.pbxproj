@@ -29,6 +29,8 @@
 		8C47615C2E476E6D00C75558 /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4761282E476E6D00C75558 /* HelpView.swift */; };
 		8C47615D2E476E6D00C75558 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4761262E476E6D00C75558 /* FavoritesView.swift */; };
 		8C47615F2E476E6D00C75558 /* SetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4761232E476E6D00C75558 /* SetPasswordView.swift */; };
+		8C98A1EF2E4CFC6700CF4573 /* DishDetailConfiguratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C98A1EE2E4CFC6700CF4573 /* DishDetailConfiguratorView.swift */; };
+		8C98A1F12E4CFCAF00CF4573 /* DishDetailConfiguratorViewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C98A1F02E4CFCAF00CF4573 /* DishDetailConfiguratorViewContent.swift */; };
 		8CABF3A22E4A2A71008C81ED /* BestSellerItemCompact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CABF3992E4A2A71008C81ED /* BestSellerItemCompact.swift */; };
 		8CABF3A62E4A2A71008C81ED /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CABF39D2E4A2A71008C81ED /* HomeView.swift */; };
 		8CABF3A72E4A2A71008C81ED /* HomeViewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CABF39E2E4A2A71008C81ED /* HomeViewContent.swift */; };
@@ -64,6 +66,8 @@
 		8C47613D2E476E6D00C75558 /* OnboardingDeliveryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingDeliveryView.swift; sourceTree = "<group>"; };
 		8C47613E2E476E6D00C75558 /* OnboardingOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingOrderView.swift; sourceTree = "<group>"; };
 		8C47613F2E476E6D00C75558 /* OnboardingPaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPaymentView.swift; sourceTree = "<group>"; };
+		8C98A1EE2E4CFC6700CF4573 /* DishDetailConfiguratorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishDetailConfiguratorView.swift; sourceTree = "<group>"; };
+		8C98A1F02E4CFCAF00CF4573 /* DishDetailConfiguratorViewContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishDetailConfiguratorViewContent.swift; sourceTree = "<group>"; };
 		8CABF3992E4A2A71008C81ED /* BestSellerItemCompact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestSellerItemCompact.swift; sourceTree = "<group>"; };
 		8CABF39D2E4A2A71008C81ED /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		8CABF39E2E4A2A71008C81ED /* HomeViewContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewContent.swift; sourceTree = "<group>"; };
@@ -204,6 +208,8 @@
 				8C4761272E476E6D00C75558 /* Favorites */,
 				8CE585172E4B728300951B8B /* ItemFullView.swift */,
 				8C4761382E476E6D00C75558 /* TabBarView.swift */,
+				8C98A1EE2E4CFC6700CF4573 /* DishDetailConfiguratorView.swift */,
+				8C98A1F02E4CFCAF00CF4573 /* DishDetailConfiguratorViewContent.swift */,
 			);
 			path = "Bottom Navigation";
 			sourceTree = "<group>";
@@ -357,11 +363,13 @@
 				8C4761472E476E6D00C75558 /* MenuView.swift in Sources */,
 				8C4761482E476E6D00C75558 /* PasswordInputView.swift in Sources */,
 				8C4761492E476E6D00C75558 /* AuthProvidersView.swift in Sources */,
+				8C98A1EF2E4CFC6700CF4573 /* DishDetailConfiguratorView.swift in Sources */,
 				8CE585502E4B82F400951B8B /* OrdersViewContent.swift in Sources */,
 				8CE5854E2E4B7D7B00951B8B /* FavoritesViewContent.swift in Sources */,
 				8CE585182E4B728300951B8B /* ItemFullView.swift in Sources */,
 				8CABF3A22E4A2A71008C81ED /* BestSellerItemCompact.swift in Sources */,
 				8CABF3A62E4A2A71008C81ED /* HomeView.swift in Sources */,
+				8C98A1F12E4CFCAF00CF4573 /* DishDetailConfiguratorViewContent.swift in Sources */,
 				8CABF3A72E4A2A71008C81ED /* HomeViewContent.swift in Sources */,
 				8CABF3A82E4A2A71008C81ED /* RecommendItemView.swift in Sources */,
 				8CABF3A92E4A2A71008C81ED /* SliderDiscountView.swift in Sources */,
