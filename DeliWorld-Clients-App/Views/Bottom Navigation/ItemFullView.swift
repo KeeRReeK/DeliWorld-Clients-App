@@ -37,7 +37,7 @@ struct ItemFullView: View {
             
         }
         .padding()
-        .background(.lightGray)
+        .background(.lightGrayCustom)
         .cornerRadius(20)
         .shadow(color: .black.opacity(0.3), radius: 5, x: 5, y: 5)
     }
