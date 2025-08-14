@@ -29,8 +29,6 @@
 		8C47615C2E476E6D00C75558 /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4761282E476E6D00C75558 /* HelpView.swift */; };
 		8C47615D2E476E6D00C75558 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4761262E476E6D00C75558 /* FavoritesView.swift */; };
 		8C47615F2E476E6D00C75558 /* SetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4761232E476E6D00C75558 /* SetPasswordView.swift */; };
-		8C98A1EF2E4CFC6700CF4573 /* DishDetailConfiguratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C98A1EE2E4CFC6700CF4573 /* DishDetailConfiguratorView.swift */; };
-		8C98A1F12E4CFCAF00CF4573 /* DishDetailConfiguratorViewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C98A1F02E4CFCAF00CF4573 /* DishDetailConfiguratorViewContent.swift */; };
 		8CABF3A22E4A2A71008C81ED /* BestSellerItemCompact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CABF3992E4A2A71008C81ED /* BestSellerItemCompact.swift */; };
 		8CABF3A62E4A2A71008C81ED /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CABF39D2E4A2A71008C81ED /* HomeView.swift */; };
 		8CABF3A72E4A2A71008C81ED /* HomeViewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CABF39E2E4A2A71008C81ED /* HomeViewContent.swift */; };
@@ -66,8 +64,6 @@
 		8C47613D2E476E6D00C75558 /* OnboardingDeliveryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingDeliveryView.swift; sourceTree = "<group>"; };
 		8C47613E2E476E6D00C75558 /* OnboardingOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingOrderView.swift; sourceTree = "<group>"; };
 		8C47613F2E476E6D00C75558 /* OnboardingPaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPaymentView.swift; sourceTree = "<group>"; };
-		8C98A1EE2E4CFC6700CF4573 /* DishDetailConfiguratorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishDetailConfiguratorView.swift; sourceTree = "<group>"; };
-		8C98A1F02E4CFCAF00CF4573 /* DishDetailConfiguratorViewContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishDetailConfiguratorViewContent.swift; sourceTree = "<group>"; };
 		8CABF3992E4A2A71008C81ED /* BestSellerItemCompact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestSellerItemCompact.swift; sourceTree = "<group>"; };
 		8CABF39D2E4A2A71008C81ED /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		8CABF39E2E4A2A71008C81ED /* HomeViewContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewContent.swift; sourceTree = "<group>"; };
@@ -99,6 +95,21 @@
 		8CABF3AA2E4A2AAC008C81ED /* BestSeller */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = BestSeller;
+			sourceTree = "<group>";
+		};
+		8CB732082E4E1782001EE1FB /* Dish Detail */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Dish Detail";
+			sourceTree = "<group>";
+		};
+		8CB732092E4E17B2001EE1FB /* Cancellation */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Cancellation;
+			sourceTree = "<group>";
+		};
+		8CB7320A2E4E17B9001EE1FB /* Delivery */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Delivery;
 			sourceTree = "<group>";
 		};
 		8CE585102E4B6F7000951B8B /* Recommendations */ = {
@@ -195,10 +206,12 @@
 		8C4761372E476E6D00C75558 /* Orders */ = {
 			isa = PBXGroup;
 			children = (
+				8CB7320A2E4E17B9001EE1FB /* Delivery */,
+				8CB732092E4E17B2001EE1FB /* Cancellation */,
 				8C98A2262E4D098600CF4573 /* Live Tracking */,
 				8C4761362E476E6D00C75558 /* OrdersView.swift */,
-				8CE5854F2E4B82F400951B8B /* OrdersViewContent.swift */,
 				8CE585512E4BAAC900951B8B /* OrderItemView.swift */,
+				8CE5854F2E4B82F400951B8B /* OrdersViewContent.swift */,
 			);
 			path = Orders;
 			sourceTree = "<group>";
@@ -206,6 +219,7 @@
 		8C4761392E476E6D00C75558 /* Bottom Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				8CB732082E4E1782001EE1FB /* Dish Detail */,
 				8C4761752E4791CF00C75558 /* Slidebar */,
 				8C4761292E476E6D00C75558 /* Help */,
 				8CABF3A12E4A2A71008C81ED /* Home */,
@@ -214,8 +228,6 @@
 				8C4761272E476E6D00C75558 /* Favorites */,
 				8CE585172E4B728300951B8B /* ItemFullView.swift */,
 				8C4761382E476E6D00C75558 /* TabBarView.swift */,
-				8C98A1EE2E4CFC6700CF4573 /* DishDetailConfiguratorView.swift */,
-				8C98A1F02E4CFCAF00CF4573 /* DishDetailConfiguratorViewContent.swift */,
 			);
 			path = "Bottom Navigation";
 			sourceTree = "<group>";
@@ -305,6 +317,9 @@
 				8C4761752E4791CF00C75558 /* Slidebar */,
 				8C98A2262E4D098600CF4573 /* Live Tracking */,
 				8CABF3AA2E4A2AAC008C81ED /* BestSeller */,
+				8CB732082E4E1782001EE1FB /* Dish Detail */,
+				8CB732092E4E17B2001EE1FB /* Cancellation */,
+				8CB7320A2E4E17B9001EE1FB /* Delivery */,
 				8CE585102E4B6F7000951B8B /* Recommendations */,
 			);
 			name = DeliWorldClients;
@@ -370,13 +385,11 @@
 				8C4761472E476E6D00C75558 /* MenuView.swift in Sources */,
 				8C4761482E476E6D00C75558 /* PasswordInputView.swift in Sources */,
 				8C4761492E476E6D00C75558 /* AuthProvidersView.swift in Sources */,
-				8C98A1EF2E4CFC6700CF4573 /* DishDetailConfiguratorView.swift in Sources */,
 				8CE585502E4B82F400951B8B /* OrdersViewContent.swift in Sources */,
 				8CE5854E2E4B7D7B00951B8B /* FavoritesViewContent.swift in Sources */,
 				8CE585182E4B728300951B8B /* ItemFullView.swift in Sources */,
 				8CABF3A22E4A2A71008C81ED /* BestSellerItemCompact.swift in Sources */,
 				8CABF3A62E4A2A71008C81ED /* HomeView.swift in Sources */,
-				8C98A1F12E4CFCAF00CF4573 /* DishDetailConfiguratorViewContent.swift in Sources */,
 				8CABF3A72E4A2A71008C81ED /* HomeViewContent.swift in Sources */,
 				8CABF3A82E4A2A71008C81ED /* RecommendItemView.swift in Sources */,
 				8CABF3A92E4A2A71008C81ED /* SliderDiscountView.swift in Sources */,
