@@ -19,7 +19,7 @@ struct OrdersViewContent: View {
         VStack {
             HStack(spacing: 16) {
                 ForEach(1...3, id: \.self) { index in
-                    ButtonOrderView(selectedButton: $selectedButton, index: index, name: arrayButtons[index - 1])
+                    ScreenSwitchButtonView(selectedButton: $selectedButton, index: index, name: arrayButtons[index - 1])
                 }
             }
             
@@ -36,28 +36,6 @@ struct OrdersViewContent: View {
                 }
             }
         }
-    }
-}
-
-struct ButtonOrderView: View {
-    
-    @Binding var selectedButton: Int?
-    var index: Int
-    var name: String
-    
-    var body: some View {
-        
-        Button(action: {
-            selectedButton = index
-        }) {
-            Text(name)
-                .font(.custom("LeagueSpartan-Medium", size: 23))
-                .padding(12)
-                .background(selectedButton == index ? Color.orangeBase : Color.orange2)
-                .foregroundColor(selectedButton == index ? .white : .black)
-                .cornerRadius(30)
-        }
-        .disabled(selectedButton == index)
     }
 }
 
