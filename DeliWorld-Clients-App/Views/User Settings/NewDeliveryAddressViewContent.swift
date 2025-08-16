@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct NewAddressViewContent: View {
+struct NewDeliveryAddressViewContent: View {
     
     @State var name: String = ""
     @State var address: String = ""
@@ -64,5 +64,5 @@ struct NewAddressViewContent: View {
 }
 
 #Preview {
-    NewAddressViewContent()
+    NewDeliveryAddressViewContent()
 }
