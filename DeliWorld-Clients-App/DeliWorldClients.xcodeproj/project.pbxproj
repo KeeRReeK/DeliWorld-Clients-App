@@ -122,6 +122,11 @@
 			path = Delivery;
 			sourceTree = "<group>";
 		};
+		8CD2C3472E4E4E7900D7E233 /* User Settings */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "User Settings";
+			sourceTree = "<group>";
+		};
 		8CE585102E4B6F7000951B8B /* Recommendations */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = Recommendations;
@@ -268,6 +273,7 @@
 		8C4761412E476E6D00C75558 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8CD2C3472E4E4E7900D7E233 /* User Settings */,
 				8C4761252E476E6D00C75558 /* Authentication */,
 				8C4761392E476E6D00C75558 /* Bottom Navigation */,
 				8C47613C2E476E6D00C75558 /* Launch */,
@@ -335,6 +341,7 @@
 				8CB732082E4E1782001EE1FB /* Dish Detail */,
 				8CB732092E4E17B2001EE1FB /* Cancellation */,
 				8CB7320A2E4E17B9001EE1FB /* Delivery */,
+				8CD2C3472E4E4E7900D7E233 /* User Settings */,
 				8CE585102E4B6F7000951B8B /* Recommendations */,
 			);
 			name = DeliWorldClients;
