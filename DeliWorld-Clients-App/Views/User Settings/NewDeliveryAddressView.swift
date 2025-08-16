@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct NewAddressView: View {
+struct NewDeliveryAddressView: View {
     
     var body: some View {
         ZStack {
@@ -36,7 +36,7 @@ struct NewAddressView: View {
                     .ignoresSafeArea()
                     .overlay(
                         ScrollView {
-                            NewAddressViewContent()
+                            NewDeliveryAddressViewContent()
                                 .padding(.top, 10)
                         }
                     )
@@ -46,5 +46,5 @@ struct NewAddressView: View {
 }
 
 #Preview {
-    NewAddressView()
+    NewDeliveryAddressView()
 }
