@@ -16,7 +16,6 @@ struct OrderItemView: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
-            // Header
             HStack {
                 VStack(alignment: .leading, spacing: 4) {
                     Text("Order #4932")
@@ -38,7 +37,6 @@ struct OrderItemView: View {
             }
             .padding(.bottom, 8)
             
-            // Expandable button
             Button(action: {
                 withAnimation(.spring()) {
                     isExpanded.toggle()
@@ -58,7 +56,6 @@ struct OrderItemView: View {
             }
             .buttonStyle(PlainButtonStyle())
             
-            // Expanded details
             if isExpanded {
                 VStack(alignment: .leading, spacing: 8) {
                     Divider()
