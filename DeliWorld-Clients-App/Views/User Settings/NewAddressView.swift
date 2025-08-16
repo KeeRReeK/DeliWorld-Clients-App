@@ -1,5 +1,5 @@
 //
-//  DeliveryAdressView.swift
+//  NewAddressView.swift
 //  DeliWorldClients
 //
 //  Created by KeeR ReeK on 16.08.2025.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct DeliveryAdressView: View {
+struct NewAddressView: View {
     
     var body: some View {
         ZStack {
@@ -24,7 +24,7 @@ struct DeliveryAdressView: View {
                             .foregroundStyle(.orangeBase)
                     }
                     Spacer()
-                    Text("Delivery Adress")
+                    Text("Add New Address")
                         .font(.system(size: 30, weight: .bold, design: .default))
                         .foregroundStyle(.white)
                     Spacer()
@@ -36,7 +36,7 @@ struct DeliveryAdressView: View {
                     .ignoresSafeArea()
                     .overlay(
                         ScrollView {
-                            DeliveryAdressViewContent()
+                            NewAddressViewContent()
                                 .padding(.top, 10)
                         }
                     )
@@ -46,5 +46,5 @@ struct DeliveryAdressView: View {
 }
 
 #Preview {
-    DeliveryAdressView()
+    NewAddressView()
 }

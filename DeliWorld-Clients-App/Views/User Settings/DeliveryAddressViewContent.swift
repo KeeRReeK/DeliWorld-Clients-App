@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct DeliveryAdressViewContent: View {
+struct DeliveryAddressViewContent: View {
     
     @State var isCheckedHome: Bool = false
     @State var isCheckedOffice: Bool = false
@@ -69,5 +69,5 @@ struct AdressView: View {
 
 
 #Preview {
-    DeliveryAdressViewContent()
+    DeliveryAddressViewContent()
 }
