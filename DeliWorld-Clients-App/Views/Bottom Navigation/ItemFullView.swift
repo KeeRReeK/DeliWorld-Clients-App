@@ -25,7 +25,6 @@ struct ItemFullView: View {
                     .lineLimit(2)
                 Spacer()
                 Text("$25.00")
-//                    .font(.system(size: 15))
                     .font(.custom("LeagueSpartan-Regular", size: 18))
                     .foregroundStyle(.orangeBase)
             }
