@@ -29,7 +29,7 @@ struct RecommendationCard: View {
                     .overlay {
                         Text("5,0 ⭐️")
                             .foregroundStyle(.black)
-                            .font(.custom("LeagueSpartan-Regular", size: 17))
+                            .font(.leagueSpartanRegular(size: 17))
                     }
                     .padding(.bottom, 170)
                     .offset(x: -80)
@@ -39,7 +39,7 @@ struct RecommendationCard: View {
                     .frame(width: 90, height: 40)
                     .overlay {
                         Text("$\(price)")
-                            .font(.custom("LeagueSpartan-Medium", size: 22))
+                            .font(.leagueSpartanMedium(size: 22))
                             .foregroundStyle(.white)
                             .padding(5)
                     }

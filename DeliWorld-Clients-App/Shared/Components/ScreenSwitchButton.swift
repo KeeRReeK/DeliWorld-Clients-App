@@ -18,7 +18,7 @@ struct ScreenSwitchButton: View {
             selectedButton = index
         }) {
             Text(name)
-                .font(.custom("LeagueSpartan-Medium", size: 23))
+                .font(.leagueSpartanMedium(size: 23))
                 .padding(12)
                 .background(selectedButton == index ? Color.orangeBase : Color.orange2)
                 .foregroundColor(selectedButton == index ? .white : .black)

@@ -37,12 +37,12 @@ struct ProfileSidebarView: View {
         var string = AttributedString("John Smith" + "\n " + "loremipusum@email.com")
         
         if let temp = string.range(of: "John Smith") {
-            string[temp].font = .custom("LeagueSpartan-Medium", size: 33)
+            string[temp].font = .leagueSpartanMedium(size: 33)
             string[temp].foregroundColor = .white
         }
         
         if let weather = string.range(of: "loremipusum@email.com") {
-            string[weather].font = .custom("LeagueSpartan-Medium", size: 16)
+            string[weather].font = .leagueSpartanMedium(size: 16)
             string[weather].foregroundColor = .yellow2
         }
         

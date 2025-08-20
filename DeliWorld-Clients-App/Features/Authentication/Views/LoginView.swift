@@ -63,7 +63,7 @@ struct LogInContent: View {
                 Button("Forget Password") {
                     print("Forget Password")
                 }
-                .font(.custom("LeagueSpartan-Medium", size: 14))
+                .font(.leagueSpartanMedium(size: 14))
                 .foregroundStyle(.orangeBase)
                 .padding(5)
             }
@@ -73,7 +73,7 @@ struct LogInContent: View {
                 Button("Log In") {
                     print("Log In")
                 }
-                .font(.custom("LeagueSpartan-Medium", size: 24))
+                .font(.leagueSpartanMedium(size: 24))
                 .padding()
                 .frame(width: 200)
                 .foregroundStyle(.white)

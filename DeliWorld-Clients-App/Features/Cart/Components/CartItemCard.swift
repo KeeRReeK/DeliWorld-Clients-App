@@ -25,7 +25,7 @@ struct CartItemCard: View {
                     HStack {
                         Text(name)
                             .multilineTextAlignment(.leading)
-                            .font(.custom("LeagueSpartan-Medium", size: 15))
+                            .font(.leagueSpartanMedium(size: 15))
                             .foregroundStyle(.white)
                         Spacer()
                         Button {

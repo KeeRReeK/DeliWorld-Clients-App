@@ -18,14 +18,14 @@ struct LaunchWelcomeScreenView: View {
                     .padding(.bottom, 40)
                 Text("Lorem ipsum dolor sit amet, consectetur\n adipiscing elit, sed do eiusmod.")
                     .multilineTextAlignment(.center)
-                    .font(.custom("LeagueSpartan-Medium", size: 14))
+                    .font(.leagueSpartanMedium(size: 14))
                     .foregroundStyle(.white)
                     .padding(.bottom, 40)
                 Button {
                     
                 } label: {
                     Text("Log In")
-                        .font(.custom("LeagueSpartan-Medium", size: 24))
+                        .font(.leagueSpartanMedium(size: 24))
                         .foregroundStyle(.orangeBase)
                         .padding(.vertical, 14)
                         .padding(.horizontal, 73)
@@ -37,7 +37,7 @@ struct LaunchWelcomeScreenView: View {
                     
                 } label: {
                     Text("Sign Up")
-                        .font(.custom("LeagueSpartan-Medium", size: 24))
+                        .font(.leagueSpartanMedium(size: 24))
                         .foregroundStyle(.orangeBase)
                         .padding(.vertical, 14)
                         .padding(.horizontal, 64)

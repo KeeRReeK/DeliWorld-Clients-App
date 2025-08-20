@@ -106,7 +106,7 @@ struct SignUpContent: View {
                 Button("Sign Up") {
                     print("Sign Up")
                 }
-                .font(.custom("LeagueSpartan-Medium", size: 24))
+                .font(.leagueSpartanMedium(size: 24))
                 .padding()
                 .frame(width: 200)
                 .foregroundStyle(.white)

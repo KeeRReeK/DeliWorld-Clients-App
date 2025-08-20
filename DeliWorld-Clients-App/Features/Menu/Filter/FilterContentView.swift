@@ -69,7 +69,7 @@ struct FilterContentView: View {
                     
                 } label: {
                     Text("Apply")
-                        .font(.custom("LeagueSpartan-Bold", size: 25))
+                        .font(.leagueSpartanBold(size: 25))
                         .foregroundStyle(.white)
                         .padding()
                         .padding(.horizontal, 50)

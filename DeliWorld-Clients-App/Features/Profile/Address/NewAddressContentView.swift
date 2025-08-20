@@ -48,7 +48,7 @@ struct NewAddressContentView: View {
                 
             } label: {
                 Text("Update Profile")
-                    .font(.custom("LeagueSpartan-SemiBold", size: 20))
+                    .font(.leagueSpartanSemiBold(size: 20))
             }
             .padding()
             .foregroundStyle(.white)

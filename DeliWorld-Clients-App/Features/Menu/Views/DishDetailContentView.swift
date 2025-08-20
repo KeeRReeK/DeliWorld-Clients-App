@@ -19,7 +19,7 @@ struct DishDetailContentView: View {
                 .foregroundStyle(.orangeBase)
             HStack {
                 Text("$14.00")
-                    .font(.custom("LeagueSpartan-Bold", size: 30))
+                    .font(.leagueSpartanBold(size: 30))
                     .foregroundStyle(.orangeBase)
                 Spacer()
                 Button {
@@ -63,7 +63,7 @@ struct DishDetailContentView: View {
                 
             } label: {
                 Text("🛒 Add to Cart")
-                    .font(.custom("LeagueSpartan-Bold", size: 30))
+                    .font(.leagueSpartanBold(size: 30))
             }
             .foregroundStyle(.white)
             .padding()

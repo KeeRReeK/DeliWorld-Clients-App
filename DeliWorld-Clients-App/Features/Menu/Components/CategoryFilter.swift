@@ -16,7 +16,7 @@ struct CategoryFilter: View {
                 .frame(width: 60, height: 70)
                 .clipShape(Circle())
             Text("Meal")
-                .font(.custom("LeagueSpartan-Medium", size: 15))
+                .font(.leagueSpartanMedium(size: 15))
         }
         .padding(.horizontal)
     }

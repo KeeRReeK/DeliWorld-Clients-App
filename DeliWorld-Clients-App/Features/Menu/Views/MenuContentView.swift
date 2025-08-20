@@ -35,7 +35,7 @@ struct MenuContentView: View {
                 }
                 Spacer()
                 Text("Sort By")
-                    .font(.custom("LeagueSpartan-Light", size: 18))
+                    .font(.leagueSpartanLight(size: 18))
                 Picker("", selection: .constant(0)) {
                     Text("Popular").tag(0)
                     Text("Newest").tag(1)

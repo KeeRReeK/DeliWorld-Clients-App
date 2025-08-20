@@ -16,7 +16,7 @@ struct RestaurantFilter: View {
                 .scaledToFit()
                 .frame(width: 60, height: 70)
             Text("Asia Food")
-                .font(.custom("LeagueSpartan-Light", size: 15))
+                .font(.leagueSpartanLight(size: 15))
         }
         .padding(.horizontal)
     }

@@ -25,7 +25,7 @@ struct CartView: View {
                             .frame(maxHeight: 30)
                     }
                 Text("Cart")
-                    .font(.custom("LeagueSpartan-Bold", size: 24))
+                    .font(.leagueSpartanBold(size: 25))
                     .foregroundStyle(.white)
             }
             .frame(maxWidth: .infinity, alignment: .center)
@@ -126,7 +126,7 @@ struct CartView: View {
                         
                     } label: {
                         Text("Checkout")
-                            .font(.custom("LeagueSpartan-Medium", size: 24))
+                            .font(.leagueSpartanMedium(size: 24))
                             .foregroundStyle(.white)
                             .padding()
                             .background(.yellowBase)

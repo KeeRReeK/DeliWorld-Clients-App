@@ -24,7 +24,7 @@ struct SidebarItemView: View {
                             Image(image)
                         }
                     Text(text)
-                        .font(.custom("LeagueSpartan-Medium", size: 24))
+                        .font(.leagueSpartanMedium(size: 24))
                         .foregroundStyle(.yellow2)
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)

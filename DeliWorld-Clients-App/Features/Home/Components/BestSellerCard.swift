@@ -27,7 +27,7 @@ struct BestSellerCard: View {
                     .frame(width: 70, height: 30)
                     .overlay {
                         Text("$\(price)")
-                            .font(.custom("LeagueSpartan-Medium", size: 17))
+                            .font(.leagueSpartanMedium(size: 17))
                             .foregroundStyle(.white)
                             .padding(5)
                     }

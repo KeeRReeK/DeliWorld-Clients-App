@@ -21,7 +21,7 @@ struct DeliveryAddressContentView: View {
                 
             } label: {
                 Text("Add New Adress")
-                    .font(.custom("LeagueSpartan-Regular", size: 25))
+                    .font(.leagueSpartanRegular(size: 25))
                     .foregroundStyle(.white)
                     .padding()
                     .background(Color.orangeBase)

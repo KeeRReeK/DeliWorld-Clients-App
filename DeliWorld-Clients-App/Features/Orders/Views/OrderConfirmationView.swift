@@ -34,10 +34,10 @@ struct OrderConfirmationView: View {
                     
                     Image("Order Image")
                     Text("¡Order Confirmed!")
-                        .font(.custom("Inter-Regular_Black", size: 24))
+                        .font(.interRegularBlack(size: 24))
                     
                     Text("Your order has been placed succesfully")
-                        .font(.custom("LeagueSpartan-Medium", size: 18))
+                        .font(.leagueSpartanMedium(size: 18))
                         .multilineTextAlignment(.center)
                         .padding(.horizontal, 20)
                     

@@ -25,7 +25,7 @@ struct ItemCard: View {
                     .lineLimit(2)
                 Spacer()
                 Text("$25.00")
-                    .font(.custom("LeagueSpartan-Regular", size: 18))
+                    .font(.leagueSpartanRegular(size: 18))
                     .foregroundStyle(.orangeBase)
             }
             HStack {

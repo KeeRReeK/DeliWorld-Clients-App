@@ -22,11 +22,11 @@ struct MenuItemCard: View {
                 RaitingView()
                 Spacer()
                 Text("$15.00")
-                    .font(.custom("LeagueSpartan-Regular", size: 25))
+                    .font(.leagueSpartanRegular(size: 25))
                     .foregroundStyle(.orangeBase)
             }
             Text("Tortilla Chips With Toppins")
-                .font(.custom("LeagueSpartan-Light", size: 17))
+                .font(.leagueSpartanLight(size: 17))
             
             Rectangle()
                 .foregroundColor(.orange)

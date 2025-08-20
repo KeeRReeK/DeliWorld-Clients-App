@@ -30,7 +30,7 @@ struct OnboardingDeliveryView: View {
                 Button("Skip >") {
                     
                 }
-                .font(.custom("LeagueSpartan-Bold", size: 20))
+                .font(.leagueSpartanBold(size: 20))
                 .foregroundColor(.orangeBase)
                 .cornerRadius(10)
                 .padding(.horizontal, 20)
@@ -49,11 +49,11 @@ struct OnboardingDeliveryContent: View {
                 .foregroundColor(.orangeBase)
             
             Text("Fast Delivery")
-                .font(.custom("Inter-Regular_Black", size: 24))
+                .font(.interRegularBlack(size: 24))
                 .foregroundColor(.orangeBase)
             
             Text("Lorem ipsum dolor sit amet, conse ctetur  adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.")
-                .font(.custom("LeagueSpartan-Medium", size: 14))
+                .font(.leagueSpartanMedium(size: 14))
                 .multilineTextAlignment(.center)
                 .foregroundColor(.black)
                 .padding(.horizontal, 60)
@@ -77,7 +77,7 @@ struct OnboardingDeliveryContent: View {
             .frame(height: 36)
             .background(.orangeBase)
             .foregroundColor(.white)
-            .font(.custom("LeagueSpartan-Medium", size: 17))
+            .font(.leagueSpartanMedium(size: 17))
             .clipShape(Capsule())
             
         }

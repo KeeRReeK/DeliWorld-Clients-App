@@ -32,10 +32,10 @@ struct OrderDeliveryNotificationView: View {
                     
                     Image("Order Image")
                     Text("¡Order Delivered!")
-                        .font(.custom("Inter-Regular_Black", size: 24))
+                        .font(.interRegularBlack(size: 24))
                     
                     Text("Your order has been succesfully delivered, enjoy it!")
-                        .font(.custom("LeagueSpartan-Medium", size: 18))
+                        .font(.leagueSpartanMedium(size: 18))
                         .multilineTextAlignment(.center)
                         .padding(.horizontal, 20)
                     
@@ -43,7 +43,7 @@ struct OrderDeliveryNotificationView: View {
                         .frame(height: 170)
                     
                     Text("If you have any questions, please reach out directly to our customer support")
-                        .font(.custom("LeagueSpartan-Medium", size: 18))
+                        .font(.leagueSpartanMedium(size: 18))
                         .multilineTextAlignment(.center)
                         .padding(30)
                     

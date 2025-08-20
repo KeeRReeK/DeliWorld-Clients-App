@@ -23,7 +23,7 @@ struct CheckoutContentView: View {
             }
             
             Text("778 Locust View Drive Oaklanda, CA")
-                .font(.custom("LeagueSpartan-Regular", size: 18))
+                .font(.leagueSpartanRegular(size: 18))
                 .padding()
                 .background(.yellow2)
                 .cornerRadius(25)
@@ -50,7 +50,7 @@ struct CheckoutContentView: View {
                     
                 } label: {
                     Text("Edit")
-                        .font(.custom("LeagueSpartan-Regular", size: 15))
+                        .font(.leagueSpartanRegular(size: 15))
                         .foregroundStyle(.orangeBase)
                         .padding(.horizontal, 15)
                         .padding(.vertical, 5)
@@ -92,7 +92,7 @@ struct CheckoutContentView: View {
                     
                 } label: {
                     Text("Pay Now")
-                        .font(.custom("LeagueSpartan-Bold", size: 25))
+                        .font(.leagueSpartanBold(size: 25))
                         .foregroundStyle(.white)
                         .padding()
                         .padding(.horizontal, 50)

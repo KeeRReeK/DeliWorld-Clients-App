@@ -20,7 +20,7 @@ struct HomeContentView: View {
                     
                 } label: {
                     Text("View All  >")
-                        .font(.custom("LeagueSpartan-Medium", size: 17))
+                        .font(.leagueSpartanMedium(size: 17))
                         .foregroundStyle(.orangeBase)
                 }
             }
@@ -51,7 +51,7 @@ struct HomeContentView: View {
                     
                 } label: {
                     Text("View All  >")
-                        .font(.custom("LeagueSpartan-Medium", size: 17))
+                        .font(.leagueSpartanMedium(size: 17))
                         .foregroundStyle(.orangeBase)
                 }
             }

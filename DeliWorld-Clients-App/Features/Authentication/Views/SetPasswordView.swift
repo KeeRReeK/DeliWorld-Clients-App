@@ -56,7 +56,7 @@ struct SetPasswordContent: View {
                 Button("Create New Password") {
                     print("Log In")
                 }
-                .font(.custom("LeagueSpartan-Medium", size: 17))
+                .font(.leagueSpartanMedium(size: 17))
                 .padding()
                 .frame(width: 200)
                 .foregroundStyle(.white)
