@@ -8,15 +8,32 @@
 import SwiftUI
 
 struct LoginView: View {
+    
+    @EnvironmentObject var router: Router
+    
+    
     var body: some View {
         ZStack {
             Color("Yellow Base")
                 .ignoresSafeArea()
             VStack {
-                Text("Log In")
-                    .foregroundStyle(.white)
-                    .font(.system(size: 28, weight: .bold))
-                    .padding(.top, 65)
+                HStack {
+                    Button {
+                        router.navigateBackTo(route: .launchWelcome)
+                    } label: {
+                        Image(systemName: "chevron.left")
+                            .font(.system(size: 25, weight: .bold))
+                            .foregroundStyle(.orangeBase)
+                            .padding(.leading)
+                    }
+                    Spacer()
+                    Text("Login")
+                        .foregroundStyle(.white)
+                        .font(.system(size: 28, weight: .bold))
+                        .padding(.trailing, 30)
+                    Spacer()
+                }
+                .padding(.top, 65)
                 
                 RoundedRectangle(cornerRadius: 24, style: .continuous)
                     .fill(Color.white)
@@ -29,11 +46,14 @@ struct LoginView: View {
                     .padding(.top, 35)
             }
             .ignoresSafeArea()
+            .navigationBarHidden(true)
         }
     }
 }
 
 struct LogInContent: View {
+    
+    @EnvironmentObject var router: Router
     @State private var email: String = ""
     @State private var password: String = ""
     @State private var isSecurePassword: Bool = true
@@ -61,7 +81,7 @@ struct LogInContent: View {
             
             VStack(alignment: .trailing) {
                 Button("Forget Password") {
-                    print("Forget Password")
+                    
                 }
                 .font(.leagueSpartanMedium(size: 14))
                 .foregroundStyle(.orangeBase)
@@ -71,7 +91,7 @@ struct LogInContent: View {
             
             VStack(alignment: .center) {
                 Button("Log In") {
-                    print("Log In")
+                    print("LogIn")
                 }
                 .font(.leagueSpartanMedium(size: 24))
                 .padding()

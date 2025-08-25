@@ -9,15 +9,16 @@ import SwiftUI
 
 struct HomeContentView: View {
     
+    @EnvironmentObject var router: Router
+    
     var body: some View {
         VStack(alignment: .leading) {
-            
             HStack {
                 Text("Best Seller")
                     .font(.system(size: 25, weight: .medium))
                 Spacer()
                 Button {
-                    
+                    router.navigate(to: .homeItemList(title: "Best Seler", subtitle: "Best Seller subtitle"))
                 } label: {
                     Text("View All  >")
                         .font(.leagueSpartanMedium(size: 17))
@@ -48,7 +49,7 @@ struct HomeContentView: View {
                     .font(.system(size: 25, weight: .medium))
                 Spacer()
                 Button {
-                    
+                    router.navigate(to: .homeItemList(title: "Recommendations", subtitle: "Recommended for you"))
                 } label: {
                     Text("View All  >")
                         .font(.leagueSpartanMedium(size: 17))

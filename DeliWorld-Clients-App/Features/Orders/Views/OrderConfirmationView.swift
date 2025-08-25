@@ -9,6 +9,8 @@ import SwiftUI
 
 struct OrderConfirmationView: View {
     
+    @EnvironmentObject var router: Router
+    
     var body: some View {
         ZStack {
             Color(.yellowBase)
@@ -17,7 +19,7 @@ struct OrderConfirmationView: View {
             VStack(spacing: 10) {
                 HStack {
                     Button {
-                        
+                        router.switchToTab(0)
                     } label: {
                         Text("<")
                             .font(.system(size: 30, weight: .bold, design: .default))
@@ -45,7 +47,7 @@ struct OrderConfirmationView: View {
                         .padding()
                     
                     Button("Track my order") {
-                        
+                        router.navigate(to: .liveTracking)
                     }
                     .foregroundStyle(.orangeBase)
                     .font(.system(size: 20, weight: .bold))
@@ -56,6 +58,7 @@ struct OrderConfirmationView: View {
             }
         }
         .ignoresSafeArea()
+        .navigationBarHidden(true)
     }
 }
 

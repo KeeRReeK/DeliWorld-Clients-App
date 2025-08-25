@@ -9,6 +9,7 @@ import SwiftUI
 
 struct DiscountSlider: View {
     
+    @EnvironmentObject var router: Router
     @State private var currentIndex = 0
     @State private var timer: Timer?
     
@@ -22,6 +23,9 @@ struct DiscountSlider: View {
                         .resizable()
                         .scaledToFit()
                         .tag(index)
+                        .onTapGesture {
+                            router.navigate(to: .dishDetail)
+                        }
                 }
             }
             .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))

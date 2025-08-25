@@ -9,6 +9,8 @@ import SwiftUI
 
 struct DeliveryAddressContentView: View {
     
+    @EnvironmentObject var router: Router
+    
     @State var isCheckedHome: Bool = false
     @State var isCheckedOffice: Bool = false
     
@@ -18,7 +20,7 @@ struct DeliveryAddressContentView: View {
             AdressView(isChecked: $isCheckedOffice, image: "building", nameTitleAdress: "My Office")
             
             Button {
-                
+                router.navigate(to: .newAddress)
             } label: {
                 Text("Add New Adress")
                     .font(.leagueSpartanRegular(size: 25))

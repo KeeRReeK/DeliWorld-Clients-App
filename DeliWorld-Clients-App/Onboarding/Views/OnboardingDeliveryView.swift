@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct OnboardingDeliveryView: View {
+    
+    @EnvironmentObject var router: Router
+    
     var body: some View {
         ZStack {
             Image("Background Onboarding Delivery")
@@ -24,23 +27,14 @@ struct OnboardingDeliveryView: View {
             }
             .ignoresSafeArea()
         }
-        .safeAreaInset(edge: .top) {
-            HStack {
-                Spacer()
-                Button("Skip >") {
-                    
-                }
-                .font(.leagueSpartanBold(size: 20))
-                .foregroundColor(.orangeBase)
-                .cornerRadius(10)
-                .padding(.horizontal, 20)
-                .padding(.vertical, 5)
-            }
-        }
+        .navigationBarHidden(true)
     }
 }
 
 struct OnboardingDeliveryContent: View {
+    
+    @EnvironmentObject var router: Router
+    
     var body: some View {
         VStack(spacing: 30) {
             
@@ -71,7 +65,7 @@ struct OnboardingDeliveryContent: View {
             }
             
             Button("Next") {
-                
+                router.navigate(to: .launchWelcome)
             }
             .frame(maxWidth: 130)
             .frame(height: 36)

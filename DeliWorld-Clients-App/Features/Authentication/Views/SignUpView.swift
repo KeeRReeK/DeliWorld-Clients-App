@@ -8,15 +8,32 @@
 import SwiftUI
 
 struct SignUpView: View {
+    
+    @EnvironmentObject var router: Router
+    
     var body: some View {
         ZStack {
             Color("Yellow Base")
                 .ignoresSafeArea()
-            VStack {
-                Text("New Account")
-                    .foregroundStyle(.white)
-                    .font(.system(size: 28, weight: .bold))
-                    .padding(.top, 65)
+            VStack{
+                HStack {
+                    Button {
+                        router.navigateBackTo(route: .launchWelcome)
+                    } label: {
+                        Image(systemName: "chevron.left")
+                            .font(.system(size: 25, weight: .bold))
+                            .foregroundStyle(.orangeBase)
+                            .padding(.leading)
+                    }
+                    Spacer()
+                    Text("New Account")
+                        .foregroundStyle(.white)
+                        .font(.system(size: 28, weight: .bold))
+                        .padding(.trailing, 30)
+                    Spacer()
+                }
+                .padding(.top, 65)
+                
                 
                 RoundedRectangle(cornerRadius: 24, style: .continuous)
                     .fill(Color.white)
@@ -29,11 +46,13 @@ struct SignUpView: View {
                     .padding(.top, 35)
             }
             .ignoresSafeArea()
+            .navigationBarHidden(true)
         }
     }
 }
 
 struct SignUpContent: View {
+    
     @State private var email: String = ""
     @State private var nickname: String = ""
     @State private var password: String = ""
@@ -104,7 +123,7 @@ struct SignUpContent: View {
             
             VStack(alignment: .center) {
                 Button("Sign Up") {
-                    print("Sign Up")
+                    print("SignUp")
                 }
                 .font(.leagueSpartanMedium(size: 24))
                 .padding()
@@ -121,7 +140,7 @@ struct SignUpContent: View {
                     Text("Already have an account? ")
                         .font(.system(size: 14))
                         .foregroundColor(.black)
-
+                    
                     Button(action: {
                         print("Log in")
                     }) {

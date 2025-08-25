@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct OnboardingOrderView: View {
+    
+    @EnvironmentObject var router: Router
+    
     var body: some View {
         ZStack {
             Image("Background Onboarding Order")
@@ -30,7 +33,7 @@ struct OnboardingOrderView: View {
             HStack {
                 Spacer()
                 Button("Skip >") {
-                    
+                    router.navigate(to: .launchWelcome)
                 }
                 .font(.leagueSpartanBold(size: 20))
                 .foregroundColor(.orangeBase)
@@ -42,6 +45,9 @@ struct OnboardingOrderView: View {
 }
 
 struct OnboardingOrderContent: View {
+    
+    @EnvironmentObject var router: Router
+    
     var body: some View {
         VStack(spacing: 30) {
             
@@ -72,7 +78,7 @@ struct OnboardingOrderContent: View {
             }
             
             Button("Next") {
-                
+                router.navigate(to: .onboardingPayment)
             }
             .frame(maxWidth: 130)
             .frame(height: 36)

@@ -9,15 +9,16 @@ import SwiftUI
 
 struct LiveTrackingView: View {
     
+    @EnvironmentObject var router: Router
+    
     var body: some View {
         ZStack {
             Color(.yellowBase)
                 .ignoresSafeArea()
-                .padding(.bottom, 20)
             VStack {
                 HStack {
                     Button {
-                        
+                        router.switchToTab(3)
                     } label: {
                         Text("<")
                             .font(.system(size: 30, weight: .bold, design: .default))
@@ -42,6 +43,7 @@ struct LiveTrackingView: View {
                     )
             }
         }
+        .navigationBarHidden(true)
     }
 }
 

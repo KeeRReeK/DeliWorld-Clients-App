@@ -1,13 +1,17 @@
 //
-//  RecommendationsView.swift
+//  ItemHomeList.swift
 //  DeliWorldClients
 //
-//  Created by KeeR ReeK on 12.08.2025.
+//  Created by KeeR ReeK on 25.08.2025.
 //
 
 import SwiftUI
 
-struct RecommendationsList: View {
+struct ItemHomeList: View {
+    
+    @EnvironmentObject var router: Router
+    var title: String
+    var subtitle: String
     
     var body: some View {
         ZStack {
@@ -17,14 +21,14 @@ struct RecommendationsList: View {
             VStack {
                 HStack {
                     Button {
-                        
+                        router.navigateBack()
                     } label: {
                         Text("<")
                             .font(.system(size: 30, weight: .bold, design: .default))
                             .foregroundStyle(.orangeBase)
                     }
                     Spacer()
-                    Text("Recommendations")
+                    Text(title)
                         .font(.system(size: 30, weight: .bold, design: .default))
                         .foregroundStyle(.white)
                     Spacer()
@@ -35,13 +39,15 @@ struct RecommendationsList: View {
                     .fill(Color.white)
                     .ignoresSafeArea()
                     .overlay(
-                        BestSellerListContent()
+                        ItemHomeListContent(subtitle: subtitle)
                             .padding(.top, 10)
                     )
             }
         }
+        .toolbar(.hidden)
     }
 }
+
 #Preview {
-    RecommendationsList()
+    ItemHomeList(title: "Test List", subtitle: "Test Subtitle")
 }

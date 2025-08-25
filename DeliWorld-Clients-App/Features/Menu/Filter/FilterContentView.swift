@@ -9,6 +9,7 @@ import SwiftUI
 
 struct FilterContentView: View {
     
+    @EnvironmentObject var router: Router
     @State var sliderValue: Float = 0
     
     var body: some View {
@@ -66,7 +67,7 @@ struct FilterContentView: View {
             
             HStack {
                 Button {
-                    
+                    router.navigateBack()
                 } label: {
                     Text("Apply")
                         .font(.leagueSpartanBold(size: 25))

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MenuItemCard: View {
     
+    @EnvironmentObject var router: Router
     @State var title: String = "Pizza"
     
     var body: some View {
@@ -32,6 +33,9 @@ struct MenuItemCard: View {
                 .foregroundColor(.orange)
                 .frame(height: 1)
                 .padding(.vertical)
+        }
+        .onTapGesture {
+            router.navigate(to: .dishDetail)
         }
         .padding(.horizontal)
     }

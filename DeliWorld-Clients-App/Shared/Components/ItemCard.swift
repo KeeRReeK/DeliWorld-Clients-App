@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ItemCard: View {
     
+    @EnvironmentObject var router: Router
     var text: String
     
     var body: some View {
@@ -34,6 +35,9 @@ struct ItemCard: View {
                 Spacer()
             }
             
+        }
+        .onTapGesture {
+            router.navigate(to: .dishDetail)
         }
         .padding()
         .background(.lightGrayCustom)

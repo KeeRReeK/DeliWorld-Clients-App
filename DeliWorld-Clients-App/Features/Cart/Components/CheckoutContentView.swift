@@ -9,6 +9,8 @@ import SwiftUI
 
 struct CheckoutContentView: View {
     
+    @EnvironmentObject var router: Router
+    
     var body: some View {
         VStack(alignment: .leading) {
             
@@ -89,7 +91,7 @@ struct CheckoutContentView: View {
             
             HStack {
                 Button {
-                    
+                    router.navigate(to: .orderConfirmation)
                 } label: {
                     Text("Pay Now")
                         .font(.leagueSpartanBold(size: 25))

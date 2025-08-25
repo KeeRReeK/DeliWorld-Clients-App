@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ProfileView: View {
     
+    @EnvironmentObject var router: Router
+    
     var body: some View {
         ZStack {
             Color(.yellowBase)
@@ -17,7 +19,7 @@ struct ProfileView: View {
             VStack {
                 HStack {
                     Button {
-                        
+                        router.navigateBack()
                     } label: {
                         Text("<")
                             .font(.system(size: 30, weight: .bold, design: .default))
@@ -42,6 +44,7 @@ struct ProfileView: View {
                     )
             }
         }
+        .toolbar(.hidden)
     }
 }
 

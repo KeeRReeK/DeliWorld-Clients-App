@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct BestSellerCard: View {
+    
+    @EnvironmentObject var router: Router
     var image: String
     var price: String
     
     
     var body: some View {
         Button {
-            
+            router.navigate(to: .dishDetail)
         } label: {
             ZStack {
                 Image(image)

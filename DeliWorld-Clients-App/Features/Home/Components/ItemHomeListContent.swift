@@ -1,13 +1,15 @@
 //
-//  BestSellerViewContent.swift
+//  ItemHomeListContent.swift
 //  DeliWorldClients
 //
-//  Created by KeeR ReeK on 11.08.2025.
+//  Created by KeeR ReeK on 25.08.2025.
 //
 
 import SwiftUI
 
-struct BestSellerListContent: View {
+struct ItemHomeListContent: View {
+    
+    var subtitle: String
     
     let items = ["Sunny Bruschetta", "Gourmet Grilled Skewers", "Barbecue tacos",
                  "Broccoli lasagna", "Hello Kitty Pizza", "Spicy Thai Basil Chicken", "Spicy Thai Basil Chicken"]
@@ -15,8 +17,10 @@ struct BestSellerListContent: View {
     var body: some View {
         VStack {
             
-            Text("Discover our most popular dishes!")
+            Text(subtitle)
                 .font(.system(size: 20, weight: .bold, design: .default))
+                .padding(.horizontal, 40)
+                .multilineTextAlignment(.center)
                 .foregroundStyle(.orangeBase)
                 .padding(.top, 20)
             
@@ -38,5 +42,5 @@ struct BestSellerListContent: View {
 }
 
 #Preview {
-    BestSellerListContent()
+    ItemHomeListContent(subtitle: "Test subtitle")
 }
