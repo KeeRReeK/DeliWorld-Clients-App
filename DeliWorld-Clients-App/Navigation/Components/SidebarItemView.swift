@@ -8,13 +8,21 @@
 import SwiftUI
 
 struct SidebarItemView: View {
+    
+    @EnvironmentObject var router: Router
+    let navRoute: NavigationRoute
     let image: String
     let text: String
+    var islogOut: Bool = false
     
     var body: some View {
         VStack {
             Button {
-                
+                if islogOut == true {
+                    router.isAlertLogOutPresented = true
+                } else {
+                    router.navigate(to: navRoute)
+                }
             } label: {
                 HStack(alignment: .center, spacing: 20) {
                     RoundedRectangle(cornerRadius: 15)
@@ -34,9 +42,18 @@ struct SidebarItemView: View {
                 .foregroundColor(.white)
                 .frame(height: 1)
         }
+        .alert("Are you sure you want to leave?", isPresented: $router.isAlertLogOutPresented) {
+            Button(role: .destructive) {
+                
+            } label: {
+                Text("Confirm")
+            }
+        } message: {
+            Text("Leave account")
+        }
     }
 }
 
 #Preview {
-    SidebarItemView(image: "None", text: "None")
+    SidebarItemView(navRoute: .cart, image: "None", text: "None")
 }

@@ -9,6 +9,8 @@ import SwiftUI
 
 struct DishDetailView: View {
     
+    @EnvironmentObject var router: Router
+    
     var body: some View {
         ZStack {
             Color(.yellowBase)
@@ -17,7 +19,7 @@ struct DishDetailView: View {
             VStack {
                 HStack {
                     Button {
-                        
+                        router.navigateBack()
                     } label: {
                         Text("<")
                             .font(.system(size: 30, weight: .bold, design: .default))
@@ -40,6 +42,7 @@ struct DishDetailView: View {
                     )
             }
         }
+        .toolbar(.hidden)
     }
 }
 

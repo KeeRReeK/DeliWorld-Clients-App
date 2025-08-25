@@ -9,6 +9,8 @@ import SwiftUI
 
 struct MenuView: View {
     
+    @EnvironmentObject var router: Router
+    
     @State private var isMenuOpen = false
     @State private var isCartOpen = false
     @State private var cartIsEmpty = false
@@ -28,7 +30,7 @@ struct MenuView: View {
                             HStack {
                                 Spacer()
                                 Button {
-                                    
+                                    router.navigate(to: .filter)
                                 } label: {
                                     ZStack {
                                         Circle()

@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct DeliWorldApp: App {
+    
+    @StateObject private var router = Router()
+    
     var body: some Scene {
         WindowGroup {
-            LaunchFirstScreenView()
+            ContentView()
+                .environmentObject(router)
         }
     }
 }

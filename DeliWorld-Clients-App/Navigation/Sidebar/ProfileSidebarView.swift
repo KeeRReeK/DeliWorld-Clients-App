@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ProfileSidebarView: View {
     
+    @EnvironmentObject var router: Router
     @Binding var isMenuOpen: Bool
     
     var body: some View {
@@ -20,11 +21,11 @@ struct ProfileSidebarView: View {
                     .frame(width: 50, height: 50)
                 Text(attributedProfileString)
             }
-            SidebarItemView(image: "Slidebar Profile", text: "My Profile")
+            SidebarItemView(navRoute: .profile, image: "Slidebar Profile", text: "My Profile")
                 .padding(.top, 50)
-            SidebarItemView(image: "Slidebar Delivery Adress", text: "Delivery Adress")
-            SidebarItemView(image: "Slidebar Settings", text: "Settings")
-            SidebarItemView(image: "Slidebar Log Out", text: "Log Out")
+            SidebarItemView(navRoute: .deliveryAddress, image: "Slidebar Delivery Adress", text: "Delivery Adress")
+            SidebarItemView(navRoute: .settings, image: "Slidebar Settings", text: "Settings")
+            SidebarItemView(navRoute: .cart, image: "Slidebar Log Out", text: "Log Out", islogOut: true)
                 .padding(.top, 50)
                 
         }

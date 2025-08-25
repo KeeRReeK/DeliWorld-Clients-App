@@ -9,6 +9,8 @@ import SwiftUI
 
 struct CartView: View {
     
+    @EnvironmentObject var router: Router
+    
     @Binding var isCartOpen: Bool
     @Binding var cartIsEmpty: Bool
     
@@ -123,7 +125,7 @@ struct CartView: View {
                     }
                     
                     Button {
-                        
+                        router.navigate(to: .checkout)
                     } label: {
                         Text("Checkout")
                             .font(.leagueSpartanMedium(size: 24))

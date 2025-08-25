@@ -9,6 +9,7 @@ import SwiftUI
 
 struct OrderItemCard: View {
     
+    @EnvironmentObject var router: Router
     @Binding var isExpanded: Bool
     @Binding var isActive: Bool
     
@@ -93,7 +94,7 @@ struct OrderItemCard: View {
                             }
                             Spacer()
                             Button {
-                                
+                                router.navigate(to: .liveTracking)
                             } label: {
                                 Text("Track order")
                                     .foregroundStyle(.orangeBase)

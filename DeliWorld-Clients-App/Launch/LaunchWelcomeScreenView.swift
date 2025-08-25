@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct LaunchWelcomeScreenView: View {
+    
+    @EnvironmentObject var router: Router
+    
     var body: some View {
         ZStack {
             Color("Orange Base")
@@ -22,7 +25,7 @@ struct LaunchWelcomeScreenView: View {
                     .foregroundStyle(.white)
                     .padding(.bottom, 40)
                 Button {
-                    
+                    router.navigate(to: .login)
                 } label: {
                     Text("Log In")
                         .font(.leagueSpartanMedium(size: 24))
@@ -34,7 +37,7 @@ struct LaunchWelcomeScreenView: View {
                         .clipShape(Capsule())
                 }
                 Button {
-                    
+                    router.navigate(to: .signUp)
                 } label: {
                     Text("Sign Up")
                         .font(.leagueSpartanMedium(size: 24))
@@ -50,6 +53,7 @@ struct LaunchWelcomeScreenView: View {
             
         }
         .ignoresSafeArea()
+        .navigationBarHidden(true)
     }
 }
 
