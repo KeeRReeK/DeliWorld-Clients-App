@@ -18,17 +18,24 @@
 			);
 			target = 8CE2A6B52E2EA75100C3CDD4 /* DeliWorldClients */;
 		};
-		8C9B875E2E5615C300A66F2E /* Exceptions for "Core" folder in "DeliWorldClients" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Models/.gitkeep,
-				Services/.gitkeep,
-			);
-			target = 8CE2A6B52E2EA75100C3CDD4 /* DeliWorldClients */;
-		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		8C645DB52E5F568700B58232 /* Presentation */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		8C645E992E5F574B00B58232 /* Data */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Data;
+			sourceTree = "<group>";
+		};
+		8C645EA42E5F57C500B58232 /* Domain */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Domain;
+			sourceTree = "<group>";
+		};
 		8C9B86622E56136000A66F2E /* App */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
@@ -39,40 +46,12 @@
 		};
 		8C9B86672E56146300A66F2E /* Core */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				8C9B875E2E5615C300A66F2E /* Exceptions for "Core" folder in "DeliWorldClients" target */,
-			);
 			path = Core;
-			sourceTree = "<group>";
-		};
-		8C9B86E42E56149200A66F2E /* Features */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Features;
-			sourceTree = "<group>";
-		};
-		8C9B86E72E56149200A66F2E /* Launch */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Launch;
-			sourceTree = "<group>";
-		};
-		8C9B86ED2E56149200A66F2E /* Navigation */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Navigation;
-			sourceTree = "<group>";
-		};
-		8C9B86F42E56149200A66F2E /* Onboarding */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Onboarding;
 			sourceTree = "<group>";
 		};
 		8C9B86F82E56149200A66F2E /* Resources */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		8C9B86FE2E56149200A66F2E /* Shared */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Shared;
 			sourceTree = "<group>";
 		};
 		8C9B875B2E5614AF00A66F2E /* Preview Content */ = {
@@ -96,13 +75,11 @@
 		8CE2A6AD2E2EA75100C3CDD4 = {
 			isa = PBXGroup;
 			children = (
+				8C645EA42E5F57C500B58232 /* Domain */,
+				8C645E992E5F574B00B58232 /* Data */,
+				8C645DB52E5F568700B58232 /* Presentation */,
 				8C9B86622E56136000A66F2E /* App */,
 				8C9B86672E56146300A66F2E /* Core */,
-				8C9B86E42E56149200A66F2E /* Features */,
-				8C9B86ED2E56149200A66F2E /* Navigation */,
-				8C9B86F42E56149200A66F2E /* Onboarding */,
-				8C9B86E72E56149200A66F2E /* Launch */,
-				8C9B86FE2E56149200A66F2E /* Shared */,
 				8C9B86F82E56149200A66F2E /* Resources */,
 				8C9B875B2E5614AF00A66F2E /* Preview Content */,
 				8CE2A6B72E2EA75100C3CDD4 /* Products */,
@@ -133,14 +110,12 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				8C645DB52E5F568700B58232 /* Presentation */,
+				8C645E992E5F574B00B58232 /* Data */,
+				8C645EA42E5F57C500B58232 /* Domain */,
 				8C9B86622E56136000A66F2E /* App */,
 				8C9B86672E56146300A66F2E /* Core */,
-				8C9B86E42E56149200A66F2E /* Features */,
-				8C9B86E72E56149200A66F2E /* Launch */,
-				8C9B86ED2E56149200A66F2E /* Navigation */,
-				8C9B86F42E56149200A66F2E /* Onboarding */,
 				8C9B86F82E56149200A66F2E /* Resources */,
-				8C9B86FE2E56149200A66F2E /* Shared */,
 				8C9B875B2E5614AF00A66F2E /* Preview Content */,
 			);
 			name = DeliWorldClients;
