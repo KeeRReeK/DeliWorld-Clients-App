@@ -33,18 +33,17 @@ Contents/
 **/Contents/
 
 # Swift Package Manager
-# Uncomment the next lines if you want to ignore SPM dependencies
-# .swiftpm/
-# Packages/
-# Package.resolved
+.swiftpm/
+Packages/
+Package.resolved
 
 # SwiftData & Core Data
 *.sqlite
 *.sqlite-shm
 *.sqlite-wal
 
-# SwiftLint (for future use)
-# .swiftlint.yml
+# SwiftLint
+.swiftlint.yml
 
 # macOS system files
 .DS_Store
